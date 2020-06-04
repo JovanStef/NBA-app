@@ -1,4 +1,4 @@
-import React , {Component} from 'react';
+import React from 'react';
 import {Route , Switch} from 'react-router-dom';
 
 //COMPONENTS
@@ -9,6 +9,7 @@ import VideosArticle from './components/Articles/Videos/Video/index';
 import NewsMain from './components/Articles/News/Main/index';
 import VideosMain from './components/Articles/Videos/Main/Index';
 import SignIn from './components/SignIn/signIn';
+import Dashboard from './components/Dashboard/dashboard';
 
 const Routes =(props)=> {
         return(
@@ -21,7 +22,7 @@ const Routes =(props)=> {
                 <Route path="/videos/:id" exact component={VideosArticle}/>
                 <Route path="/videos" exact component={VideosMain}/>
                 <Route path="/sign-in" exact component={SignIn}/>
-
+                <Route path="/dashboard" exact component={Dashboard}/>
             </Switch>
             </Layout>
         )

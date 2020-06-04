@@ -6,7 +6,6 @@ import FontAwesome from 'react-fontawesome';
 import './sideNav.css'
 
 const SideNavItems=(props)=>{
-console.log(props)
     const items=[
         {
             style:'option',
@@ -75,7 +74,6 @@ console.log(props)
                     key={i}
                     className={item.style}
                     onClick={()=>{
-                        console.log('out')
                         firebase.auth().signOut()
                         .then(()=>{
                             props.history.push("/")
@@ -87,8 +85,6 @@ console.log(props)
                 </div>
                 )
             }else{
-                console.log('out')
-
                 template = element(item,i)
             }
         }
